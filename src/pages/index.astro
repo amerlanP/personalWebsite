@@ -49,12 +49,12 @@ const projects = (await getCollection('work'))
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Selected Work</h3>
-					<p>Take a look below at some of my featured work for clients from the past few years.</p>
+					<h3>My Projects</h3>
+					<p>Below are some of my projects that I have made either personally, or in school.</p>
 				</header>
 
 				<div class="gallery">
-					<Grid variant="offset">
+					<Grid>
 						{
 							projects.map((project) => (
 								<li>
