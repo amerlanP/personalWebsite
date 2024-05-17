@@ -1,16 +1,11 @@
 ---
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from '../layouts/BaseLayout.astro';
-const resumeURL = '/public/resume.pdf';
+const resumeURL = '/resume.pdf';
 
 ---
 
-<BaseLayout>
-    <!-- <div class="iframe-container">
-        <iframe allowfullscreen
-            src="https://docs.google.com/document/d/e/2PACX-1vSJyH6cA08RfyakiNqp-KBUTcurjwWYgEurj5Nu_gsNsl8r4aSrT1NxM31tXhx9cw/pub?embedded=true"
-        />
-    </div> -->
+<BaseLayout title="Resume | Patrick Amerlan" description="Patrick Amerlan's Resume">
     <div class="pdf-container">
         <embed src={resumeURL} type="application/pdf"/>
     </div>

@@ -1,9 +1,27 @@
 ---
-import Icon from './Icon.astro';
+import Icon from "./Icon.astro";
+import Pill from "./Pill.astro";
+import Grid from '../components/Grid.astro';
 ---
 
-<section class="box skills">
-	<div class="stack gap-2 lg:gap-4">
+<section class="box">
+    <div>
+        <Grid>
+            <Pill><Icon icon="cpp" size="1.4em"/></Pill>
+            <Pill><Icon icon="cpp" size="1.4em"/></Pill>
+            <Pill><Icon icon="cpp" size="1.4em"/></Pill>
+            <Pill><Icon icon="cpp" size="1.4em"/></Pill>
+            <Pill><Icon icon="cpp" size="1.4em"/></Pill>
+            <Pill><Icon icon="cpp" size="1.4em"/></Pill>
+            <Pill><Icon icon="cpp" size="1.4em"/></Pill>
+            <Pill><Icon icon="cpp" size="1.4em"/></Pill>
+            <Pill><Icon icon="cpp" size="1.4em"/></Pill>
+            <Pill><Icon icon="cpp" size="1.4em"/></Pill>
+            
+        </Grid>
+    </div>
+
+	<!-- <div class="stack gap-2 lg:gap-4">
 		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
 		<h2>Developer</h2>
 		<p>I love coding and all that comes with it. Creating things that I can take pride in is incredibly gratifying to me.</p>
@@ -17,7 +35,7 @@ import Icon from './Icon.astro';
 		<Icon icon="brain" color="var(--accent-regular)" size="2.5rem" gradient />
 		<h2>Mindset</h2>
 		<p>I am a quick learner with lots of patience. If I need to become proficient at something new, I will gladly do so.</p>
-	</div>
+	</div> -->
 
 <style>
 	.box {
@@ -28,18 +46,14 @@ import Icon from './Icon.astro';
 		box-shadow: var(--shadow-sm);
 	}
 
+    .box div {
+        display: flex;
+    }
+
 	.skills {
 		display: flex;
 		flex-direction: column;
 		gap: 3rem;
-	}
-
-	.skills h2 {
-		font-size: var(--text-lg);
-	}
-
-	.skills p {
-		color: var(--gray-400);
 	}
 
 	@media (min-width: 50em) {
