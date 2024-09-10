@@ -5,7 +5,7 @@ imgs:
   - /assets/slidingblock.png
 img_alt: A sliding block puzzle game with brown blocks and red blocks
 description: |
-  Designed an app that finds the shortest solution to a sliding block puzzle.
+  Designed a console application that finds the shortest solution to a sliding block puzzle
 tags:
   - C++
   - BFS
