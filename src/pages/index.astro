@@ -13,7 +13,6 @@ import Pill from "../components/Pill.astro";
 import PortfolioPreview from "../components/PortfolioPreview.astro";
 
 // Page section components
-import ContactCTA from "../components/ContactCTA.astro";
 import Skills from "../components/Skills.astro";
 import Languages from "../components/Languages.astro";
 
@@ -78,8 +77,6 @@ const projects = (await getCollection("work"))
 				</div>
 			</section>
 		</main>
-
-		<!-- <ContactCTA /> -->
 	</div>
 </BaseLayout>
 
@@ -96,7 +93,6 @@ const projects = (await getCollection("work"))
 	}
 
 	.hero img {
-		aspect-ratio: 5 / 4;
 		object-fit: cover;
 		object-position: top;
 		border-radius: 1.5rem;

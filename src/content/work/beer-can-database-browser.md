@@ -4,7 +4,7 @@ publishDate: 2024-06-11 00:00:00
 imgs:
   - /assets/beer-browse.PNG
   - /assets/beer-search.PNG
-img_alt: Soft pink and baby blue water ripples together in a subtle texture.
+img_alt: A menu full of beer cans with ID numbers and prices
 description: |
   A cross-platform mobile application that provides a solution to efficient database searching
 tags:

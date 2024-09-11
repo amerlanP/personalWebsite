@@ -3,12 +3,14 @@ title: Sliding Block Solver
 publishDate: 2023-4-01 00:00:00
 imgs:
   - /assets/slidingblock.png
+  - /assets/sliding-block-puzzle-solution.png
 img_alt: A sliding block puzzle game with brown blocks and red blocks
 description: |
   Designed a console application that finds the shortest solution to a sliding block puzzle
 tags:
   - C++
   - BFS
+  - Algorithm Heavy
 ---
 
 Shown above is an example of a puzzle found in the popular mobile game: "Unblock Me". The red block on the left side must reach the gap on the right side. This is done by sliding all other blocks out of the way, with tall blocks only able to move vertically, and wide ones horizontally.

@@ -33,8 +33,8 @@ const { Content } = await entry.render();
 		<div class="stack gap-15">
 			<header>
 				<div class="wrapper stack gap-2">
-					<a class="back-link" href="/work/"
-						><Icon icon="arrow-left" /> Work</a
+					<a class="back-link" href="/projects/"
+						><Icon icon="arrow-left" /> Projects</a
 					>
 					<Hero title={entry.data.title} align="start">
 						<div class="details">
@@ -47,7 +47,7 @@ const { Content } = await entry.render();
 				</div>
 			</header>
 			<main class="wrapper">
-				<div class="stack gap-10 content">
+				<div class="stack gap-10 image-content">
 					{
 						entry.data.imgs.length > 1 ? (
 							<Grid>
@@ -59,15 +59,22 @@ const { Content } = await entry.render();
 							entry.data.imgs.map((pic) => <img src={pic} />)
 						)
 					}
-					<div class="content">
-						<Content />
-					</div>
+				</div>
+				<div class="content">
+					<Content />
 				</div>
 			</main>
 		</div>
 	</div>
 
 	<style>
+		html,
+		body {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+		}
+
 		header {
 			padding-bottom: 2.5rem;
 			border-bottom: 1px solid var(--gray-800);
@@ -94,6 +101,19 @@ const { Content } = await entry.render();
 		.description {
 			font-size: var(--text-lg);
 			max-width: 54ch;
+		}
+
+		.image-content {
+			max-width: 100ch;
+			margin-inline: auto;
+			margin-bottom: 1rem;
+		}
+
+		.image-content :global(img) {
+			border-radius: 1rem;
+			box-shadow: var(--shadow-sm);
+			background: var(--gradient-subtle);
+			border: 1px solid var(--gray-800);
 		}
 
 		.content {
