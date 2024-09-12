@@ -1,61 +1,86 @@
 ---
-import Icon from './Icon.astro';
+import Icon from "./Icon.astro";
 ---
 
 <section class="box skills">
 	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
+		<Icon
+			icon="terminal-window"
+			color="var(--accent-regular)"
+			size="2.5rem"
+			gradient
+		/>
 		<h2>Passion</h2>
-		<p>I love coding and all that comes with it. Creating things that I can take pride in is incredibly gratifying to me.</p>
+		<p>
+			I love coding and all that comes with it. Creating things that I can
+			take pride in is incredibly gratifying to me.
+		</p>
 	</div>
 	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="graduation-cap" color="var(--accent-regular)" size="2.5rem" gradient />
+		<Icon
+			icon="graduation-cap"
+			color="var(--accent-regular)"
+			size="2.5rem"
+			gradient
+		/>
 		<h2>Education</h2>
-		<p>University of Illinois at Chicago <br> Bachelor of Computer Science <br>GPA: 3.3/4.0</p>
+		<p>
+			University of Illinois at Chicago <br /> Bachelor of Computer Science
+			<br />GPA: 3.3/4.0
+		</p>
 	</div>
 	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="brain" color="var(--accent-regular)" size="2.5rem" gradient />
+		<Icon
+			icon="brain"
+			color="var(--accent-regular)"
+			size="2.5rem"
+			gradient
+		/>
 		<h2>Mindset</h2>
-		<p>I am a quick learner with lots of patience. If I need to become proficient at something new, I will gladly do so.</p>
+		<p>
+			I am a quick learner with lots of patience. If I need to become
+			proficient at something new, I will gladly do so.
+		</p>
 	</div>
 
-<style>
-	.box {
-		border: 1px solid var(--gray-800);
-		border-radius: 0.75rem;
-		padding: 1.5rem;
-		background-color: var(--gray-999_40);
-		box-shadow: var(--shadow-sm);
-	}
-
-	.skills {
-		display: flex;
-		flex-direction: column;
-		gap: 3rem;
-	}
-
-	.skills h2 {
-		font-size: var(--text-lg);
-	}
-
-	.skills p {
-		color: var(--gray-400);
-	}
-
-	@media (min-width: 50em) {
+	<style>
 		.box {
-			border-radius: 1.5rem;
-			padding: 2.5rem;
+			border: 1px solid var(--gray-800);
+			border-radius: 0.75rem;
+			padding: 1.5rem;
+			background-color: var(--gray-999_40);
+			box-shadow: var(--shadow-sm);
 		}
 
 		.skills {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			gap: 5rem;
+			display: flex;
+			flex-direction: column;
+			gap: 3rem;
 		}
 
 		.skills h2 {
-			font-size: var(--text-2xl);
+			font-size: var(--text-lg);
 		}
-	}
-</style>
+
+		.skills p {
+			color: var(--gray-400);
+		}
+
+		@media (min-width: 50em) {
+			.box {
+				border-radius: 1.5rem;
+				padding: 2.5rem;
+			}
+
+			.skills {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 5rem;
+			}
+
+			.skills h2 {
+				font-size: var(--text-2xl);
+			}
+		}
+	</style>
+</section>

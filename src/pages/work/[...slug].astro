@@ -2,8 +2,6 @@
 import { type CollectionEntry, getCollection } from "astro:content";
 
 import BaseLayout from "../../layouts/BaseLayout.astro";
-
-import ContactCTA from "../../components/ContactCTA.astro";
 import Hero from "../../components/Hero.astro";
 import Icon from "../../components/Icon.astro";
 import Pill from "../../components/Pill.astro";
@@ -33,9 +31,9 @@ const { Content } = await entry.render();
 		<div class="stack gap-15">
 			<header>
 				<div class="wrapper stack gap-2">
-					<a class="back-link" href="/projects/"
-						><Icon icon="arrow-left" /> Projects</a
-					>
+					<a class="back-link" href="/projects/">
+						<Icon icon="arrow-left" /> Projects
+					</a>
 					<Hero title={entry.data.title} align="start">
 						<div class="details">
 							<div class="tags">
@@ -46,8 +44,8 @@ const { Content } = await entry.render();
 					</Hero>
 				</div>
 			</header>
-			<main class="wrapper">
-				<div class="stack gap-10 image-content">
+			<main class="wrapper stack gap-10">
+				<div class="image-content">
 					{
 						entry.data.imgs.length > 1 ? (
 							<Grid>
@@ -95,6 +93,7 @@ const { Content } = await entry.render();
 
 		.tags {
 			display: flex;
+			flex-wrap: wrap;
 			gap: 0.5rem;
 		}
 
@@ -104,40 +103,29 @@ const { Content } = await entry.render();
 		}
 
 		.image-content {
-			max-width: 100ch;
+			/* max-width: 100ch; */
+			/* max-height: 50ch; */
+			/* overflow: hidden; */
 			margin-inline: auto;
-			margin-bottom: 1rem;
 		}
 
 		.image-content :global(img) {
 			border-radius: 1rem;
+			max-width: 50ch;
+			max-height: 100ch;
 			box-shadow: var(--shadow-sm);
 			background: var(--gradient-subtle);
 			border: 1px solid var(--gray-800);
 		}
 
 		.content {
-			max-width: 65ch;
+			max-width: 80ch;
 			margin-inline: auto;
+			/* margin-top: 2rem; */
 		}
 
 		.content > :global(* + *) {
 			margin-top: 1rem;
-		}
-
-		.content :global(h1),
-		.content :global(h2),
-		.content :global(h3),
-		.content :global(h4),
-		.content :global(h5) {
-			margin: 1.5rem 0;
-		}
-
-		.content :global(img) {
-			border-radius: 1.5rem;
-			box-shadow: var(--shadow-sm);
-			background: var(--gradient-subtle);
-			border: 1px solid var(--gray-800);
 		}
 
 		.content :global(blockquote) {
